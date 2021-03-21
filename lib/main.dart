@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/data.dart';
+// import 'package:flutter_app/data.dart';
 
 void main() => runApp(MyWidget());
 
@@ -203,6 +203,7 @@ class MyWidgetState extends State<MyWidget> {
                           ),
                           onTap: () => setState(() {
                             _isVisibleComment = !_isVisibleComment;
+                            _isVisible = false;
                             comment = '';
                           }),
                         ),
@@ -222,6 +223,7 @@ class MyWidgetState extends State<MyWidget> {
             onPressed: () {
               setState(() {
                 _isVisible = !_isVisible;
+                _isVisibleComment = false;
               });
             },
           ),
